@@ -6,7 +6,7 @@
 <h3 style="color: red;">Tiros errados: <strong id="errados"></strong></h3>
 <h3>Tempo Jogado: <strong id="cronometro"></strong></h3>
 
-<canvas width="1300" height="600" style="border: 1px solid darkblue;">
+<canvas width="1300" height="2000" style="border: 1px solid darkblue;">
 </canvas>
 
 
@@ -17,7 +17,7 @@
     var placar_errado = 0;
 
     pincel.fillStyle = "lightgrey";
-    pincel.fillRect(0, 0, 1300, 600);
+    pincel.fillRect(0, 0, 1300, 2000);
 
     var xAleatorio;
     var yAleatorio;
@@ -31,7 +31,7 @@
     }
 
     function limpaTela() {
-        pincel.clearRect(0, 0, 1300, 600);
+        pincel.clearRect(0, 0, 1300, 2000);
     }
 
     function desenhaAlvo(x, y) {
@@ -50,7 +50,7 @@
     function atualizaTela() {
         limpaTela();
         xAleatorio = sorteiaPosicao(1300);
-        yAleatorio = sorteiaPosicao(600);
+        yAleatorio = sorteiaPosicao(2000);
         desenhaAlvo(xAleatorio, yAleatorio);
     }
 
