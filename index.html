@@ -1,24 +1,23 @@
 <meta charset="UTF-8">
 
-<h1 style="color: darkblue; font-family: arial; padding-left: 185px;">TIRO AO ALVO</h1>
+<h1 style="color: darkblue; font-family: arial; padding-left: 40%;">TIRO AO ALVO</h1>
 
 <h3 style="color: green;">Tiros corretos: <strong id="corretos"></strong></h3>
 <h3 style="color: red;">Tiros errados: <strong id="errados"></strong></h3>
 <h3>Tempo Jogado: <strong id="cronometro"></strong></h3>
 
-<canvas width="600" height="400" style="border: 1px solid darkblue;">
+<canvas width="1300" height="600" style="border: 1px solid darkblue;">
 </canvas>
 
 
 <script>
-
     var tela = document.querySelector("canvas");
     var pincel = tela.getContext('2d');
     var placar_correto = 0;
     var placar_errado = 0;
 
     pincel.fillStyle = "lightgrey";
-    pincel.fillRect(0, 0, 600, 400);
+    pincel.fillRect(0, 0, 1300, 600);
 
     var xAleatorio;
     var yAleatorio;
@@ -32,14 +31,14 @@
     }
 
     function limpaTela() {
-        pincel.clearRect(0, 0, 600, 400);
+        pincel.clearRect(0, 0, 1300, 600);
     }
 
     function desenhaAlvo(x, y) {
 
-        desenhaCirculo(x, y, 30, "red");
-        desenhaCirculo(x, y, 20, "white");
-        desenhaCirculo(x, y, 10, "red");
+        desenhaCirculo(x, y, 60, "red");
+        desenhaCirculo(x, y, 40, "white");
+        desenhaCirculo(x, y, 20, "red");
     }
 
     function sorteiaPosicao(maximo) {
@@ -50,8 +49,8 @@
 
     function atualizaTela() {
         limpaTela();
-        xAleatorio = sorteiaPosicao(600);
-        yAleatorio = sorteiaPosicao(400);
+        xAleatorio = sorteiaPosicao(1300);
+        yAleatorio = sorteiaPosicao(600);
         desenhaAlvo(xAleatorio, yAleatorio);
     }
 
